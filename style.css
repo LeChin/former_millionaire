@@ -107,3 +107,13 @@ footer .row p {
   padding-top: 0px;
   width: 220px;
 }
+
+footer ul.social-icons li {
+  float: left;
+  font-size: 1.5em;
+  margin-right: 20px;
+}
+
+footer ul.social-icons li a i {
+  color: white;
+}
