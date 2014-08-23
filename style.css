@@ -91,10 +91,22 @@ a:hover {
   color: #60A34D;
 }
 
+.current-total-wrapper {
+  width: 90%;
+  margin: 0 auto;
+}
+
 .current-total {
-  font-size: 11em;
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+  font-size: 14vw;
   font-family: 'dinn_next_lt_pro_regular';
   color: #60A34D;
+}
+
+.hoverable {
+  cursor: pointer;
 }
 
 /* PayPal Stuff */
