@@ -16,6 +16,8 @@
     font-style: normal;
 }
 
+/* end fonts */
+
 body {
   font-size: 14pt;
   color: #4c4c4c;
@@ -24,6 +26,15 @@ body {
 
 h1, h2, h3 {
   font-family: 'museo_slab500';
+}
+
+a {
+  text-decoration: underline;
+  color: #4c4c4c;
+}
+
+a:hover {
+  color: #60A34D;
 }
 
 /* Header */
@@ -84,6 +95,23 @@ h1, h2, h3 {
   font-size: 11em;
   font-family: 'dinn_next_lt_pro_regular';
   color: #60A34D;
+}
+
+/* PayPal Stuff */
+
+.fa-circle-o {
+  color: #60A34D;
+  padding-right: 10px;
+}
+
+button.contribute-button {
+  background-color: #60A34D;
+  color: white;
+  font-size: 21pt !important;
+}
+
+button.contribute-button:hover {
+  color: #4c4c4c !important;
 }
 
 /* Footer */
