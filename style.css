@@ -1,3 +1,17 @@
+body {
+  font-size: 16px;
+  color: #4c4c4c;
+}
+
+/* Header */
+
+#header {
+  background-color: #60A34D;
+}
+
+
+/* Content */
+
 .container-fluid {
   padding: 0px;
 }
@@ -13,6 +27,41 @@
   padding: 15px 0px;
 }
 
+.row .col-md-3 p img {
+  width: 70%;
+  height: auto;
+}
+
+/* Sections */
+
+.story-row h2 {
+  margin-top: -5px;
+}
+
+.story-row p,
+.benefits-row p {
+  width: 810px;
+  margin: 0 auto;
+  padding: 20px 0px;
+}
+
+#benefits-section {
+  padding: 0px 10%;
+}
+
+#benefits-section .col-md-3 h4 {
+  color: #60A34D;
+}
+
+.current-total {
+  font-size: 15em;
+  color: #60A34D;
+}
+
+/* Footer */
+
 footer {
   background-color: #60A34D;
+  color: white;
+  padding: 40px;
 }
