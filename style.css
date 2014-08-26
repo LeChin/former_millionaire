@@ -116,13 +116,13 @@ a:hover {
   padding-right: 10px;
 }
 
-button.contribute-button {
+.contribute-button {
   background-color: #60A34D;
   color: white;
   font-size: 21pt !important;
 }
 
-button.contribute-button:hover {
+.contribute-button:hover {
   color: #4c4c4c !important;
 }
 
