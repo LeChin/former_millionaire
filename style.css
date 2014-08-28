@@ -64,11 +64,6 @@ a:hover {
   padding: 15px 0px;
 }
 
-.row .col-md-3 p img {
-  width: 70%;
-  height: auto;
-}
-
 /* Sections */
 
 .story-row h2 {
@@ -105,8 +100,42 @@ a:hover {
   color: #60A34D;
 }
 
-.hoverable {
-  cursor: pointer;
+/* Images */
+
+#arts,
+#education,
+#community,
+#people {
+  display: block;
+  height: 0;
+  width: 100%;
+  padding-bottom: 100%;
+  background-size: 100%;
+  background-position: 0 0;
+  cursor: auto;
+}
+
+#arts {
+  background-image: url('images/Arts.png');
+}
+
+#education {
+  background-image: url('images/Education.png');
+}
+
+#community {
+  background-image: url('images/Community.png');
+}
+
+#people {
+  background-image: url('images/People.png');
+}
+
+#arts:hover,
+#education:hover,
+#community:hover,
+#people:hover {
+  background-position: 0 100%;
 }
 
 /* PayPal Stuff */
