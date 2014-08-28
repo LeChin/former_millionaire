@@ -99,6 +99,7 @@
 
         <div class="row">
           <div class="col-md-4"></div>
+
           <div class="col-md-4 text-center">
             <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post" name="myform">
               <input type="hidden" name="on0" value="Donation Amount"> 
@@ -109,14 +110,16 @@
               
               <hr>
 
-              <input name="os0" type="radio" value="Other"> 
               Feel like contributing more?
+              <input name="os0" type="radio" value="Other"> 
               <input name="os0" type="text" value=""> 
 
-              <br><br>
+              <hr>
+              <input name="os0" type="checkbox" value=""> 
               I Accept the <a href="#" data-toggle="modal" data-target="#termsConditions">Terms &amp; Conditions</a>
-              <br>
-              <input type="submit" class="btn btn-lg contribute-button" name="submit" onClick="CalculateOrder(this.form)" alt="Make payments with PayPal - it's fast, free and secure!" value="Contribute!">
+              <br><br>
+              <input type="submit" class="btn btn-lg contribute-button" name="submit" onClick="CalculateOrder(this.form)" alt="Make payments with PayPal - it's fast, free and secure!" value="Contribute!" disabled>
+              <br><br>
               <!-- <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1"> -->
               <!-- <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" onClick="CalculateOrder(this.form)" alt="Make payments with PayPal - it's fast, free and secure!"> -->
               <!-- <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1"> -->
@@ -140,9 +143,8 @@
               <input type="hidden" name="cn" value="Add a note:">
               <input type="hidden" name="bn" value="PP-DonationsBF:btn_donateCC_LG.gif:NonHosted">
             </form>
-
-            <!-- paypal form goes here -->
           </div>
+
           <div class="col-md-4"></div>
         </div>
       </div>

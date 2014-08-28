@@ -67,7 +67,7 @@ a:hover {
 /* Sections */
 
 .story-row h2 {
-  margin-top: -7px;
+  margin-top: -10px;
 }
 
 .story-row p,
@@ -155,6 +155,15 @@ a:hover {
   color: #4c4c4c !important;
 }
 
+hr {
+  border-color: #60A34D;
+  border-width: 2px;
+}
+
+form label{
+  color: #60A34D;
+}
+
 /* Footer */
 
 footer {
@@ -185,4 +194,8 @@ footer ul.social-icons li {
 
 footer ul.social-icons li a i {
   color: white;
+}
+
+footer ul.social-icons li a:hover i {
+  color: #4c4c4c;
 }
