@@ -10,24 +10,30 @@
     <script language="javascript">
 
       function CalculateOrder(form){
-        var radG1;
-         
-        for (var i = 0; i < document.myform.os0.length; i++){
-         if(document.myform.os0[i].checked==true){radG1=document.myform.os0[i].value;}
-        }
-
-
-        if(radG1 == "1.00")
-         {
-         document.myform.amount.value = '1.00';
-         document.myform.item_number.value = "FFM-1-00";
-         }
-        else if(radG1 == "Other")
-         {
-         document.myform.amount.value = [custom_value] ;
-         document.myform.item_number.value = "FFM-0-00";
-         }     
+       var radG1;
+       
+      for (var i = 0; i < document.myform.os0.length; i++){
+       if(document.myform.os0[i].checked==true){radG1=document.myform.os0[i].value;}
       }
+
+
+      if(radG1 == "1.00")
+       {
+       document.myform.amount.value = '1.00';
+       }
+      else if(radG1 == "Other")
+       {
+       document.myform.amount.value = document.getElementById('#custom_value').value;
+       }     
+      };
+
+      function validate() {
+        if (document.getElementById('agree_to_terms').checked) {
+          return $('.contribute-button').removeAttr('disabled');
+        } else {
+          return $('.contribute-button').attr('disabled', 'disabled');
+        }
+      };
     </script>
   </head>
 
@@ -46,7 +52,7 @@
                 <p>Learn about Steven's quest to become a "former millionaire".</p>
               </div>
             </div>
-            <iframe src="http://player.vimeo.com/video/97620325?api=1" width="100%" height="450px" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+            <iframe src="http://player.vimeo.com/video/97620325?title=0&amp;byline=0&amp;portrait=0&amp;color=ff0179" width="100%" height="450px" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
           </div>
         </div>
       </header>
@@ -109,21 +115,21 @@
             <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post" name="myform">
               <input type="hidden" name="on0" value="Donation Amount"> 
 
-              <input name="1_dollar" type="radio" value="1.00"> 
+              <input name="os0" type="radio" value="1.00"> 
               $1
 
               
               <hr>
 
               Feel like contributing more?
-              <input name="other" type="radio" value="Other"> 
-              <input name="custom_value" type="text" value=""> 
+              <input name="os0" type="radio" value="Other"> 
+              <input name="os0" type="text" value="" id="custom_value">
 
               <hr>
-              <input name="accept_terms" type="checkbox" value=""> 
+              <input name="os0" type="checkbox" value="" onClick="validate()" id="agree_to_terms"> 
               I Accept the <a href="#" data-toggle="modal" data-target="#termsConditions">Terms &amp; Conditions</a>
               <br><br>
-              <input type="submit" class="btn btn-lg contribute-button" name="submit" onClick="CalculateOrder(this.form)" alt="Make payments with PayPal - it's fast, free and secure!" value="Contribute!" >
+              <input type="submit" class="btn btn-lg contribute-button" name="submit" onClick="CalculateOrder(this.form)" alt="Make payments with PayPal - it's fast, free and secure!" value="Contribute!" disabled="disabled">
               <br><br>
               <input type="hidden" name="cmd" value="_donations">
               <!-- Replace "business" value with your PayPal Email Address or Account ID -->
@@ -137,7 +143,7 @@
               <input type="hidden" name="currency_code" value="USD">
               <input type="hidden" name="lc" value="US">
               <!-- Replace value with the web page you want the customer to return to after a successful transaction -->
-              <input type="hidden" name="return" value="http://www.futureformermillionaire.com">
+              <input type="hidden" name="return" value="http://www.futureformermillionaire.com/thank-you.html">
               <!-- Replace value with the web page you want the customer to return to after item cancellation -->
               <input type="hidden" name="cancel_return" value="http://www.futureformermillionaire.com">
               <input type="hidden" name="button_subtype" value="products">
