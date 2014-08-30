@@ -7,33 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-    <script language="javascript">
-      function CalculateOrder(form){
-        var radG1;
-       
-        for (var i = 0; i < document.myform.os0.length; i++){
-         if(document.myform.os0[i].checked==true){radG1=document.myform.os0[i].value;}
-        }
-
-        if(radG1 == "1.00")
-         {
-           document.myform.amount.value = '1.00';
-         }
-        else if(radG1 == "Other")
-         {
-           document.myform.amount.value = document.getElementById('#custom_value').value;
-         }     
-      };
-    </script>
-    <script language="javascript">
-      function validate() {
-        if (document.getElementById('agree_to_terms').checked) {
-          $('.contribute-button').removeAttr('disabled');
-        } else {
-          $('.contribute-button').attr('disabled', 'disabled');
-        }
-      };
-    </script>
+    
   </head>
 
   <body>
@@ -67,9 +41,11 @@
           <div class="col-md-12">
             <h2 class="text-center">Current Total</h2>
             <div class="current-total-wrapper text-center">
+              <!-- STEVEN - You change these numbers! -->
               <p class="current-total">
                 $0,001,242
               </p>
+              <!-- STEVEN - You change these numbers! -->
             </div>
           </div>
         </div>
@@ -239,5 +215,6 @@
         </div>
       </div>
     </div>
+    <script src="functions.js"></script>
   </body>
 </html>
