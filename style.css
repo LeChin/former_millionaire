@@ -64,6 +64,34 @@ a:hover {
   padding: 15px 0px;
 }
 
+/* Video */
+
+#video-box {
+  position: relative;
+}
+
+#video-overlay {
+  display: table;
+  position: absolute;
+  background-color: black;
+  opacity: .8;
+  width: 100%;
+  height: 450px;
+}
+
+.vert-align {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.vert-align p {
+  margin-top: 20px;
+}
+
+.vert-align:hover {
+  cursor: pointer;
+}
+
 /* Sections */
 
 .story-row h2 {
