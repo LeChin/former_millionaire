@@ -7,12 +7,14 @@ function CalculateOrder(form){
 
   if(radG1 == "1.00")
    {
-     document.myform.amount.value = '1.00';
+      document.myform.amount.value = '1.00';
    }
   else if(radG1 == "Other")
    {
-     document.myform.amount.value = document.getElementById('custom_value').value;
-   }     
+      document.myform.amount.value = document.getElementById('custom_value').value;
+   }
+
+  document.myform.reset();
 };
 function validate() {
   if (document.getElementById('agree_to_terms').checked) {
