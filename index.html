@@ -19,15 +19,16 @@
           <div class="text-center" id="header">
             <img src="images/FFMLOGOLow.png" alt="Future Former Millionaire" />
           </div>
-
-          <div id="video-box">
-            <div id="video-overlay" class="text-center">
-              <div class="vert-align">
-                <img src="images/FFM_Playbutton.png" id="play-button"/>
-                <p>Learn about Steven's quest to become a "former millionaire".</p>
+          <div id="video-wrapper">
+            <div id="video-box">
+              <div id="video-overlay" class="text-center">
+                <div class="vert-align">
+                  <img src="images/FFM_Playbutton.png" id="play-button"/>
+                  <p>Learn about Steven's quest to become a "former millionaire".</p>
+                </div>
               </div>
+              <iframe src="http://player.vimeo.com/video/97620325?title=0&amp;byline=0&amp;portrait=0&amp;color=ff0179api=1" width="80%" height="450" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen id="video"></iframe>
             </div>
-            <iframe src="http://player.vimeo.com/video/97620325?title=0&amp;byline=0&amp;portrait=0&amp;color=ff0179api=1" width="100%" height="450px" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen id="video"></iframe>
           </div>
         </div>
       </header>
@@ -97,7 +98,6 @@
                 <input name="os0" type="radio" value="1.00" id="radio1"> 
                 <label for="radio1" class="green-font">$1</span></label>
               </div>
-
               
               <hr>
               
@@ -120,8 +120,7 @@
               <br><br>
               <input type="submit" class="btn btn-lg contribute-button" name="submit" onClick="CalculateOrder(this.form)" alt="Make payments with PayPal - it's fast, free and secure!" value="Contribute!" disabled>
               <br><br>
-              <!-- <input type="hidden" name="cmd" value="_donations"> -->
-              <!-- Replace "business" value with your PayPal Email Address or Account ID -->
+
               <input type="hidden" name="business" value="stevenkasprzyk@mac.com">
               <input type="hidden" name="item_number">
               <input type="hidden" name="item_name" value="Future Former Millionaire"> 
@@ -131,14 +130,11 @@
               <input type="hidden" name="tax" value="0"> 
               <input type="hidden" name="currency_code" value="USD">
               <input type="hidden" name="lc" value="US">
-              <!-- Replace value with the web page you want the customer to return to after a successful transaction -->
               <input type="hidden" name="return" value="http://www.futureformermillionaire.com">
-              <!-- Replace value with the web page you want the customer to return to after item cancellation -->
               <input type="hidden" name="cancel_return" value="http://www.futureformermillionaire.com">
               <input type="hidden" name="button_subtype" value="products">
               <input type="hidden" name="no_note" value="0">
               <input type="hidden" name="cn" value="Add a note:">
-              <!-- <input type="hidden" name="bn" value="PP-DonationsBF:btn_donateCC_LG.gif:NonHosted"> -->
             </form>
           </div>
 

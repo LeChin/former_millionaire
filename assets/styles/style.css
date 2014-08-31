@@ -22,6 +22,7 @@ body {
   font-size: 14pt;
   color: #4c4c4c;
   font-family: 'dinn_next_lt_pro_regular';
+  overflow-x: hidden;
 }
 
 h1, h2, h3 {
@@ -66,8 +67,15 @@ a:hover {
 
 /* Video */
 
+#video-wrapper {
+  background-color: #60A34D;
+  width: 100%;
+}
+
 #video-box {
   position: relative;
+  text-align: center;
+  width: 100%;
 }
 
 #video-overlay {
@@ -257,4 +265,36 @@ footer ul.social-icons li a i {
 
 footer ul.social-icons li a:hover i {
   color: #4c4c4c;
+}
+
+@media(max-width:767px){
+  .col-md-3 {
+    width: 25%;
+    float: left;
+  }
+
+  .col-md-4 {
+    width: 33.33333333%;
+    float: left;
+  }
+
+  .text-center {
+    font-size: 18px;
+  }
+}
+
+@media(min-width:768px) and (max-width:991px){
+  .col-md-3 {
+    width: 25%;
+    float: left;
+  }
+
+  .col-md-4 {
+    width: 33.33333333%;
+    float: left;
+  }
+
+  .text-center {
+    font-size: 18px;
+  }
 }
