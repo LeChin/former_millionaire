@@ -4,10 +4,12 @@
     <title>Future Former Millionaire</title>    
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/styles/style.css">
+    <link rel="stylesheet" href="assets/styles/awesome-bootstrap-checkbox.css">
     <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="http://f.vimeocdn.com/js/froogaloop2.min.js"></script>
   </head>
 
   <body>
@@ -21,11 +23,11 @@
           <div id="video-box">
             <div id="video-overlay" class="text-center">
               <div class="vert-align">
-                <img src="images/FFM_Playbutton.png" />
+                <img src="images/FFM_Playbutton.png" id="play-button"/>
                 <p>Learn about Steven's quest to become a "former millionaire".</p>
               </div>
             </div>
-            <iframe src="http://player.vimeo.com/video/97620325?title=0&amp;byline=0&amp;portrait=0&amp;color=ff0179" width="100%" height="450px" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+            <iframe src="http://player.vimeo.com/video/97620325?title=0&amp;byline=0&amp;portrait=0&amp;color=ff0179api=1" width="100%" height="450px" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen id="video"></iframe>
           </div>
         </div>
       </header>
@@ -87,47 +89,56 @@
           <div class="col-md-4"></div>
 
           <div class="col-md-4 text-center">
-            <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post" name="myform">
-              <input type="hidden" name="on0" value="Donation Amount"> 
+            <form  name="_xclick" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+              <input type="hidden" name="cmd" value="_xclick">
 
               <br>
-              <input name="os0" type="radio" value="1.00"> 
-              $1
+              <div class="radio radio-success">
+                <input name="os0" type="radio" value="1.00" id="radio1"> 
+                <label for="radio1" class="green-font">$1</span></label>
+              </div>
 
               
               <hr>
-
-              <span>Feel like contributing more?   </span>
-              <input name="os0" type="radio" value="Other"> 
+              
+              <span class="contribute-more-label">Feel like contributing more?</span>
+              <div class="radio radio-success contribute-more">
+                <input name="os0" type="radio" value="Other" id="radio2">
+                <label for="radio2" class="other-amount">&nbsp;</label>
+              </div>
               <input name="os0" type="text" value="" id="custom_value" style="width:4em;">
 
               <br>
               <br>
 
-              <input name="agree_to_terms" type="checkbox" onClick="validate()" id="agree_to_terms"> 
-              I Accept the <a href="#" data-toggle="modal" data-target="#termsConditions">Terms &amp; Conditions</a>
+              <div class="checkbox checkbox-success checkbox-circle">
+                <input name="agree_to_terms" type="checkbox" onClick="validate()" id="agree_to_terms"> 
+                <label for="agree_to_terms" class="agree-terms">&nbsp;</label>
+              </div>
+              <span>I Accept the <a href="#" data-toggle="modal" data-target="#termsConditions">Terms &amp; Conditions</a></span>
+
               <br><br>
               <input type="submit" class="btn btn-lg contribute-button" name="submit" onClick="CalculateOrder(this.form)" alt="Make payments with PayPal - it's fast, free and secure!" value="Contribute!" disabled>
               <br><br>
-              <input type="hidden" name="cmd" value="_donations">
+              <!-- <input type="hidden" name="cmd" value="_donations"> -->
               <!-- Replace "business" value with your PayPal Email Address or Account ID -->
               <input type="hidden" name="business" value="stevenkasprzyk@mac.com">
               <input type="hidden" name="item_number">
               <input type="hidden" name="item_name" value="Future Former Millionaire"> 
               <input type="hidden" name="amount"> 
-              <input type="hidden" name="no_shipping" value="2">
+              <input type="hidden" name="no_shipping" value="1">
               <input type="hidden" name="no_note" value="1">
               <input type="hidden" name="tax" value="0"> 
               <input type="hidden" name="currency_code" value="USD">
               <input type="hidden" name="lc" value="US">
               <!-- Replace value with the web page you want the customer to return to after a successful transaction -->
-              <input type="hidden" name="return" value="http://www.futureformermillionaire.com/thank-you.html">
+              <input type="hidden" name="return" value="http://www.futureformermillionaire.com">
               <!-- Replace value with the web page you want the customer to return to after item cancellation -->
               <input type="hidden" name="cancel_return" value="http://www.futureformermillionaire.com">
               <input type="hidden" name="button_subtype" value="products">
               <input type="hidden" name="no_note" value="0">
               <input type="hidden" name="cn" value="Add a note:">
-              <input type="hidden" name="bn" value="PP-DonationsBF:btn_donateCC_LG.gif:NonHosted">
+              <!-- <input type="hidden" name="bn" value="PP-DonationsBF:btn_donateCC_LG.gif:NonHosted"> -->
             </form>
           </div>
 
@@ -215,6 +226,6 @@
         </div>
       </div>
     </div>
-    <script src="functions.js"></script>
+    <script src="assets/javascripts/functions.js"></script>
   </body>
 </html>

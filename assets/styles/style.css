@@ -1,17 +1,17 @@
 @font-face {
     font-family: 'museo_slab500';
-    src: url('fonts/museoslab_500_macroman/Museo_Slab_500_2-webfont.eot');
-    src: url('fonts/museoslab_500_macroman/Museo_Slab_500_2-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/museoslab_500_macroman/Museo_Slab_500_2-webfont.woff') format('woff'),
-         url('fonts/museoslab_500_macroman/Museo_Slab_500_2-webfont.ttf') format('truetype'),
-         url('fonts/museoslab_500_macroman/Museo_Slab_500_2-webfont.svg#museo_slab500') format('svg');
+    src: url('../../fonts/museoslab_500_macroman/Museo_Slab_500_2-webfont.eot');
+    src: url('../../fonts/museoslab_500_macroman/Museo_Slab_500_2-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../../fonts/museoslab_500_macroman/Museo_Slab_500_2-webfont.woff') format('woff'),
+         url('../../fonts/museoslab_500_macroman/Museo_Slab_500_2-webfont.ttf') format('truetype'),
+         url('../../fonts/museoslab_500_macroman/Museo_Slab_500_2-webfont.svg#museo_slab500') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'dinn_next_lt_pro_regular';
-    src: url('fonts/dinn_next_lt_pro_regular/DINNextLTPro-Regular.otf');
+    src: url('../../fonts/dinn_next_lt_pro_regular/DINNextLTPro-Regular.otf');
     font-weight: normal;
     font-style: normal;
 }
@@ -86,6 +86,7 @@ a:hover {
 
 .vert-align p {
   margin-top: 20px;
+  color: white;
 }
 
 .vert-align:hover {
@@ -144,19 +145,19 @@ a:hover {
 }
 
 #arts {
-  background-image: url('images/Arts.png');
+  background-image: url('../../images/Arts.png');
 }
 
 #education {
-  background-image: url('images/Education.png');
+  background-image: url('../../images/Education.png');
 }
 
 #community {
-  background-image: url('images/Community.png');
+  background-image: url('../../images/Community.png');
 }
 
 #people {
-  background-image: url('images/People.png');
+  background-image: url('../../images/People.png');
 }
 
 #arts:hover,
@@ -188,8 +189,38 @@ hr {
   border-width: 2px;
 }
 
-form label{
+.green-font {
   color: #60A34D;
+  font-size: 21pt;
+}
+
+.radio label.green-font::after,
+.radio label.green-font::before {
+  margin-top: 10px;
+}
+
+.checkbox label.agree-terms::after,
+.checkbox label.agree-terms::before,
+.radio label.other-amount::after,
+.radio label.other-amount::before {
+  margin-top: 4px;
+}
+
+#custom_value,
+#custom_value:focus {
+  border-color: #60A34D;
+  border-style: solid;
+  outline: none;
+}
+
+.contribute-more,
+.contribute-more-label,
+.checkbox-circle {
+  display: inline-block;
+}
+
+.contribute-more-label {
+  width: 290px;
 }
 
 /* Footer */
