@@ -97,7 +97,7 @@ a:hover {
   color: white;
 }
 
-.vert-align:hover {
+#play-button:hover {
   cursor: pointer;
 }
 
